@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perusahaan Kami</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #1e88e5;
+      --bg-light: #ffffff;
+      --bg-dark: #121212;
+      --text-light: #333;
+      --text-dark: #f0f0f0;
+      --accent: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    button, select {
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    #darkToggle, #langToggle {
+      background: white;
+      color: var(--primary);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--accent);
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    body.dark .card {
+      background: #1e1e1e;
+    }
+
+    .card i {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .card img {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: var(--primary);
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    .lang-en { display: none; }
+    body.en .lang-en { display: block; }
+    body.en .lang-id { display: none; }
+  </style>
+</head>
+<body class="id">
+  <header>
+    <div class="logo">
+      <img src="https://via.placeholder.com/40x40?text=Logo" alt="Logo">
+      <strong>Perusahaan Kami</strong>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="controls">
+      <select id="bgSelect" title="Pilih Background">
+        <option value="">Background</option>
+        <option value="#ffffff">Putih</option>
+        <option value="#f0f0f0">Abu Muda</option>
+        <option value="#ffe082">Kuning</option>
+        <option value="#e1bee7">Ungu</option>
+        <option value="#c8e6c9">Hijau</option>
+      </select>
+      <button id="darkToggle">🌙</button>
+      <button id="langToggle">EN</button>
+    </div>
+  </header>
+
+  <!-- About Us -->
+  <section id="about">
+    <div class="section-title lang-id">Tentang Kami</div>
+    <div class="section-title lang-en">About Us</div>
+    <p class="lang-id">Kami adalah perusahaan teknologi yang menyediakan solusi digital terdepan untuk kebutuhan bisnis Anda.</p>
+    <p class="lang-en">We are a technology company providing advanced digital solutions for your business needs.</p>
+  </section>
+
+  <!-- Our Services -->
+  <section id="services">
+    <div class="section-title lang-id">Layanan Kami</div>
+    <div class="section-title lang-en">Our Services</div>
+    <div class="card-grid">
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h4>Web Development</h4>
+        <p>Membangun situs web profesional dan responsif.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bullhorn"></i>
+        <h4>Marketing</h4>
+        <p>Strategi digital marketing untuk memperluas pasar Anda.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Keamanan</h4>
+        <p>Keamanan data dan sistem TI Anda adalah prioritas kami.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Products -->
+  <section id="products">
+    <div class="section-title lang-id">Produk Kami</div>
+    <div class="section-title lang-en">Our Products</div>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Product 1"/>
+        <h4>Aplikasi Mobile</h4>
+        <p>Solusi mobile untuk Android & iOS.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Product 2"/>
+        <h4>CRM System</h4>
+        <p>Kelola pelanggan dengan sistem yang efisien.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Product 3"/>
+        <h4>E-Commerce</h4>
+        <p>Platform belanja online yang aman dan mudah digunakan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact">
+    <div class="section-title lang-id">Hubungi Kami</div>
+    <div class="section-title lang-en">Contact Us</div>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Nama / Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Pesan / Message" rows="5" required></textarea>
+      <button type="submit">Kirim / Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Perusahaan Kami</p>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    document.getElementById('darkToggle').onclick = () => {
+      document.body.classList.toggle('dark');
+    };
+
+    // Language switch toggle
+    document.getElementById('langToggle').onclick = () => {
+      if (document.body.classList.contains('id')) {
+        document.body.classList.replace('id', 'en');
+        document.getElementById('langToggle').innerText = 'ID';
+      } else {
+        document.body.classList.replace('en', 'id');
+        document.getElementById('langToggle').innerText = 'EN';
+      }
+    };
+
+    // Background changer
+    document.getElementById('bgSelect').addEventListener('change', function() {
+      document.body.style.background = this.value || '';
+    });
+  </script>
+</body>
+</html>
